@@ -1,7 +1,9 @@
 <mvc:View 
-	xmlns="sap.m"
+	controllerName="sap.ui.demo.wt.controller.App"
+	xmlns="sap.m" 
 	xmlns:mvc="sap.ui.core.mvc">
-	<Text text="Hi Universe xml"/>
+	<Button
+		text="Say Hello"
+		press="onShowHello" />
 </mvc:View>
-
 
