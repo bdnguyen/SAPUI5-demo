@@ -40,5 +40,9 @@
 				}
 			}
 		},
+		"contentDensities": {
+			"cozy": true,
+			"compact": false
+		}
 	}
 }
