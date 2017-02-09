@@ -1,2 +1,2 @@
-# SAPUI5-tutorials
-SAPUI5 official tutorials
+# SAPUI5-demo
+SAPUI5 official walkthrough, get familiar with UI5.
