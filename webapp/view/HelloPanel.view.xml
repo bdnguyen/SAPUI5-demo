@@ -8,7 +8,7 @@
 		width="auto">
 		<content>
 			<Button
-				text="{i18n>openDialogButtontext}"
+				text="{i18n>openDialogButtonText}"
 				press="onOpenDialog"
 				class="sapUiSmallMarginEnd"/>
 			<Button 
