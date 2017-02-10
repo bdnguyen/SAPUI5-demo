@@ -43,6 +43,14 @@
 		"contentDensities": {
 			"cozy": true,
 			"compact": false
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		}
+		
 	}
 }
