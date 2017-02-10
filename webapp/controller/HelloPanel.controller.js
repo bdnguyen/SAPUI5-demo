@@ -12,17 +12,35 @@ sap.ui.define([
 			// show msg
 			MessageToast.show(sMsg);
 		},
-
-		onOpenDialog: function() {
+		
+		// Private functions and variables should always start with an underscore.
+		/* Always use the addDependent method to connect the dialog to the lifecycle management and data binding of the view, 
+		 even though it is not added to its UI tree. */
+		_getDialog : function () {
+			// create dialog lazily
+			if (!this._oDialog) {
+				// create dialog via fragment factory
+				this._oDialog = sap.ui.xmlfragment("sap.ui.demo.wt.view.HelloDialog", this);
+				// connect dialog to view (models, lifecycle)
+				this.getView().addDependent(this._oDialog);
+			}
+			return this._oDialog;
+		},
+		
+		onOpenDialog : function () {
 			var oView = this.getView();
 			var oDialog = oView.byId("helloDialog");
 			// create dialog lazily
 			if (!oDialog) {
 				// create dialog via fragment factory
-				oDialog = sap.ui.xmlfragment(oView.getId(), "sap.ui.demo.wt.view.HelloDialog");
+				oDialog = sap.ui.xmlfragment(oView.getId(), "sap.ui.demo.wt.view.HelloDialog", this);
 				oView.addDependent(oDialog);
 			}
 			oDialog.open();
+		},
+		
+		onCloseDialog : function () {
+			this.getView().byId("helloDialog").close();
 		}
 		
 	});
