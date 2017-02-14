@@ -38,6 +38,10 @@
 				"settings": {
 					"bundleName": "sap.ui.demo.wt.i18n.i18n"
 				}
+			},
+			"invoice": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "Invoices.json"
 			}
 		},
 		"contentDensities": {
@@ -45,12 +49,9 @@
 			"compact": false
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			]
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		}
-		
 	}
 }
